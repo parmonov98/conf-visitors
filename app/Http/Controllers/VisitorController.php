@@ -20,7 +20,7 @@ class VisitorController extends Controller
     public function index()
     {
 //        throw new NotFoundResourceException("No visitors found");
-        return Visitor::query()->orderByDesc('id')->get();
+        return Visitor::query()->orderByDesc('id')->paginate();
     }
 
     /**
